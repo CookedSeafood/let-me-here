@@ -1,0 +1,54 @@
+{
+    "schemaVersion": 1,
+    "id": "let-me-here",
+    "version": "${version}",
+    "name": "Let Me Here",
+    "description": "Lightweight block sitting mod.",
+    "authors": [
+        {
+            "name": "CookedSeafood",
+            "contact": {
+                "homepage": "https://github.com/CookedSeafood"
+            }
+        }
+    ],
+    "contact": {
+        "homepage": "https://modrinth.com/mod/let-me-here",
+        "sources": "https://github.com/FabricMC/let-me-here"
+    },
+    "license": "GNU-GPL-3.0",
+    "icon": "assets/let-me-here/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "net.cookedseafood.letmehere.LetMeHere"
+        ],
+        "client": [
+            "net.cookedseafood.letmehere.LetMeHereClient"
+        ]
+    },
+    "mixins": [
+        "let-me-here.mixins.json",
+        {
+            "config": "let-me-here.client.mixins.json",
+            "environment": "client"
+        }
+    ],
+    "depends": {
+        "fabricloader": ">=0.17.3",
+        "minecraft": "~1.21.6",
+        "java": ">=21",
+        "fabric-api": "*"
+    },
+    "suggests": {
+        "another-mod": "*"
+    },
+    "custom": {
+        "loom:injected_interfaces": {
+            "net/minecraft/class_1297": [
+                "net/cookedseafood/letmehere/api/EntityApi"
+            ]
+        }
+    },
+    "accessWidener": "let-me-here.accesswidener"
+}
