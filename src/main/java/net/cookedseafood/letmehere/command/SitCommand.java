@@ -3,13 +3,13 @@ package net.cookedseafood.letmehere.command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.BoolArgumentType;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.enums.BlockHalf;
 import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.command.argument.Vec3ArgumentType;
 import net.minecraft.entity.Entity;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.world.ServerWorld;
@@ -45,8 +45,7 @@ public class SitCommand {
 
         BlockPos targetBlockPos = blockPos.offset(direction.getOpposite());
         BlockState targetBlockState = world.getBlockState(targetBlockPos);
-        Block targetBlock = targetBlockState.getBlock();
-        if (targetBlock instanceof StairsBlock) {
+        if (targetBlockState.isIn(BlockTags.STAIRS)) {
             BlockHalf stairHalf = targetBlockState.get(StairsBlock.HALF);
             Direction stairDirection = targetBlockState.get(StairsBlock.FACING);
             if (stairHalf == BlockHalf.BOTTOM && stairDirection != direction) {

@@ -17,7 +17,7 @@ public class LetMeHere implements ModInitializer {
 
     public static final byte VERSION_MAJOR = 0;
     public static final byte VERSION_MINOR = 1;
-    public static final byte VERSION_PATCH = 9;
+    public static final byte VERSION_PATCH = 10;
 
     @Override
     public void onInitialize() {
