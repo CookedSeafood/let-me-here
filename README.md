@@ -4,7 +4,7 @@ Letmehere is a lightweight block sitting mod.
 
 ## Feature
 
-With default keybind:
+With default keybinds:
 
 - `Z` to **sit**.
 - `LCtrl` + `Z` to **sit in the block horizon center**.
