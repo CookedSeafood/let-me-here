@@ -14,17 +14,18 @@
     ],
     "contact": {
         "homepage": "https://modrinth.com/mod/let-me-here",
-        "sources": "https://github.com/FabricMC/let-me-here"
+        "sources": "https://github.com/CookedSeafood/let-me-here",
+        "issues": "https://github.com/CookedSeafood/let-me-here/issues"
     },
     "license": "GNU-GPL-3.0",
     "icon": "assets/let-me-here/icon.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-            "net.cookedseafood.letmehere.LetMeHere"
+            "net.hederamc.letmehere.LetMeHere"
         ],
         "client": [
-            "net.cookedseafood.letmehere.LetMeHereClient"
+            "net.hederamc.letmehere.LetMeHereClient"
         ]
     },
     "mixins": [
@@ -35,20 +36,10 @@
         }
     ],
     "depends": {
-        "fabricloader": ">=0.17.3",
-        "minecraft": "~1.21.6",
-        "java": ">=21",
+        "fabricloader": ">=0.18.4",
+        "minecraft": "~26.1-",
+        "java": ">=25",
         "fabric-api": "*"
     },
-    "suggests": {
-        "another-mod": "*"
-    },
-    "custom": {
-        "loom:injected_interfaces": {
-            "net/minecraft/class_1297": [
-                "net/cookedseafood/letmehere/api/EntityApi"
-            ]
-        }
-    },
-    "accessWidener": "let-me-here.accesswidener"
+    "accessWidener": "let-me-here.classtweaker"
 }

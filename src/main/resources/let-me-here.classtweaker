@@ -1,0 +1,9 @@
+classTweaker v1 official
+
+transitive-accessible method net/minecraft/world/entity/decoration/ArmorStand setMarker (Z)V
+
+transitive-accessible method net/minecraft/world/entity/decoration/ArmorStand setSmall (Z)V
+
+transitive-inject-interface  net/minecraft/world/entity/Entity net/hederamc/letmehere/api/Sitter
+
+transitive-inject-interface  net/minecraft/world/entity/Entity net/hederamc/letmehere/api/EntityApi
