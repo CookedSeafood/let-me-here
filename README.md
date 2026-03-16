@@ -1,6 +1,6 @@
 # Let Me Here
 
-Letmehere is a lightweight block sitting mod.
+Let me here is a lightweight block sitting mod.
 
 ## Feature
 
