@@ -38,17 +38,10 @@ public class LetMeHereClient implements ClientModInitializer {
                 sit = true;
             }
 
-            boolean align = false;
-            while (ALIGN_KEY.consumeClick()) {
-                align = true;
-            }
-
             if (sit) {
                 Vec3 pos = client.player.getPos();
-
-                if (align) {
-                    ClientPlayNetworking.send(new SitC2SPayload(Math.floor(pos.x) + 0.5, pos.y, Math.floor(pos.z) + 0.5));
-                    return;
+                if (ALIGN_KEY.isDown()) {
+                    pos = new Vec3(Math.floor(pos.x) + 0.5, pos.y, Math.floor(pos.z) + 0.5);
                 }
 
                 ClientPlayNetworking.send(new SitC2SPayload(pos));
